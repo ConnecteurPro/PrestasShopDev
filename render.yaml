@@ -19,6 +19,3 @@ services:
       - key: PS_DOMAIN
         value: PS_DOMAIN # Remplacez par le domaine réel ou utilisez une variable d'environnement
     plan: free
-    disks:
-      - name: modules
-        mountPath: /var/www/html/modules # Correction : indentation ajoutée pour le mountPath
