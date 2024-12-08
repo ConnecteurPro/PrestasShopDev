@@ -1,0 +1,23 @@
+version: 1
+services:
+  - type: web
+    name: prestashop
+    env: docker
+    image: prestashop/prestashop:latest
+    envVars:
+      - key: DB_SERVER
+        value: prestashop_mysql
+      - key: DB_NAME
+        value: prestashop
+      - key: DB_USER
+        value: root
+      - key: DB_PASSWD # Référence au secret ajouté dans Render
+        fromSecret: DB_PASSWD
+      - key: PS_INSTALL_AUTO
+        value: "1"
+      - key: PS_DOMAIN
+        value: PS_DOMAIN
+    plan: free
+    disks:
+      - name: modules
+    mountPath: /var/www/html/modules
