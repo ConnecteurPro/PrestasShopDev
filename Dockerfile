@@ -18,4 +18,7 @@ USER www-data:www-data
 
 ENTRYPOINT ["docker-php-entrypoint"]
 
+CMD ["apache2-foreground"]
+
+EXPOSE 80
 
