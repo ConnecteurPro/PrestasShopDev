@@ -3,6 +3,7 @@ services:
     name: prestashop-dev
     env: docker
     plan: free
+    autoDeploy: false
     envVars:
       - fromGroup: PrestashopDev # Référence au groupe d'environnement
       - key: PS_INSTALL_AUTO
