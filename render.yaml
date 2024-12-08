@@ -1,14 +1,11 @@
-version: 1
 services:
   - type: web
-    name: prestashop
+    name: prestashop-dev
     env: docker
-    image:
-      url: docker.io/prestashop/prestashop:latest
+    plan: free
     envVars:
       - fromGroup: PrestashopDev # Référence au groupe d'environnement
       - key: PS_INSTALL_AUTO
         value: "1"
       - key: PS_DOMAIN
         value: "https://render.com" # Remplacez par le domaine réel ou utilisez une variable d'environnement
-    plan: free
