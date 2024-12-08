@@ -6,9 +6,9 @@ services:
     image: prestashop/prestashop:latest
     envVars:
       - key: DB_SERVER
-        value: prestashop_mysql
+        value: DB_SERVER
       - key: DB_NAME
-        value: prestashop
+        value: DB_NAME
       - key: DB_USER
         value: root
       - key: DB_PASSWD # Référence au secret ajouté dans Render
