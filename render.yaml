@@ -6,16 +6,16 @@ services:
     image:
       url: docker.io/prestashop/prestashop:latest
     envVars:
-      - key: DB_SERVER
+      - fromGroup: PrestashopDev
         value: DB_SERVER # Remplacez par le nom du serveur de base de données ou utilisez une variable d'environnement
-      - key: DB_NAME
+      - fromGroup: PrestashopDev
         value: DB_NAME # Remplacez par le nom de la base de données ou utilisez une variable d'environnement
-      - key: DB_USER
+      - fromGroup: PrestashopDev
         value: DB_USER # Remplacez par le nom d'utilisateur de la base de données ou utilisez une variable d'environnement
-      - key: DB_PASSWD # Référence au secret ajouté dans Render
-        fromSecret: DB_PASSWD
+      - fromGroup: PrestashopDev # Référence au secret ajouté dans Render
+        value: DB_PASSWD
       - key: PS_INSTALL_AUTO
         value: "1"
       - key: PS_DOMAIN
-        value: PS_DOMAIN # Remplacez par le domaine réel ou utilisez une variable d'environnement
+        value: "https://render.com" # Remplacez par le domaine réel ou utilisez une variable d'environnement
     plan: free
