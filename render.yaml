@@ -3,7 +3,7 @@ services:
   - type: web
     name: prestashop
     env: docker
-    image: prestashop/prestashop:1.7.8.0
+    image: "prestashop/prestashop:1.7.8.0"
     envVars:
       - key: DB_SERVER
         value: DB_SERVER # Remplacez par le nom du serveur de base de données ou utilisez une variable d'environnement
