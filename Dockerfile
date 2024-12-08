@@ -1,5 +1,5 @@
 # Utiliser une version spécifique de PrestaShop
-FROM prestashop/prestashop:latest
+FROM prestashop/prestashop:8.0.1
 
 # Mettre à jour le système et installer des dépendances supplémentaires
 RUN apt-get update && apt-get install -y \
@@ -15,8 +15,6 @@ RUN chown -R www-data:www-data /var/www/html
 
 # Passer à l'utilisateur www-data
 USER www-data:www-data
-
-ENTRYPOINT ["docker-php-entrypoint"]
 
 EXPOSE 80
 
