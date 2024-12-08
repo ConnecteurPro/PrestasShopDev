@@ -8,5 +8,3 @@ services:
       - fromGroup: PrestashopDev # Référence au groupe d'environnement
       - key: PS_INSTALL_AUTO
         value: "1"
-      - key: PS_DOMAIN
-        value: "https://render.com" # Remplacez par le domaine réel ou utilisez une variable d'environnement
