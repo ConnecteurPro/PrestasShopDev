@@ -1,5 +1,5 @@
 # Utiliser une version spécifique de PrestaShop
-FROM prestashop/prestashop:8.0.0
+FROM prestashop/prestashop:latest
 
 # Mettre à jour le système et installer des dépendances supplémentaires
 RUN apt-get update && apt-get install -y \
