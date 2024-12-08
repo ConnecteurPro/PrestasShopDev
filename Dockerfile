@@ -15,3 +15,5 @@ RUN chown -R www-data:www-data /var/www/html
 
 # Passer à l'utilisateur www-data
 USER www-data
+
+EXPOSE 80
